@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+func main() {
+	num := 10
+	modificarValor(&num)
+	fmt.Println("Valor atualizado:", num)
+}
+
+func modificarValor(ptr *int) {
+	*ptr = 20
+}
