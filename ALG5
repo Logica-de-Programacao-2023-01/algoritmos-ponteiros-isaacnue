@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	var num float64
+	num = 3.14
+	atualizarMediaPi(&num)
+	fmt.Println("Valor atualizado:", num)
+}
+
+func atualizarMediaPi(ptr *float64) {
+	*ptr = (*ptr + math.Pi) / 2
+}
