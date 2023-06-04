@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+type Livro struct {
+	titulo string
+	autor  string
+}
+
+func main() {
+	livro := Livro{
+		titulo: "Livro A",
+		autor:  "Anônimo",
+	}
+	alterarTitulo(&livro)
+	fmt.Println("Título do livro:", livro.titulo)
+}
+
+func alterarTitulo(l *Livro) {
+	if l.autor == "Anônimo" {
+		l.titulo = "Desconhecido"
+	}
+}
